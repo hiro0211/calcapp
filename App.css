@@ -1,0 +1,67 @@
+.calculator {
+  width: 250px;
+  margin: 50px auto;
+  background-color: #000;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.display {
+  background-color: #000;
+  color: white;
+  font-size: 48px;
+  padding: 20px;
+  text-align: right;
+}
+
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1px;
+}
+
+button {
+  border: none;
+  font-size: 24px;
+  padding: 20px;
+  cursor: pointer;
+  transition: filter 0.3s;
+}
+
+button:hover {
+  filter: brightness(90%);
+}
+
+.top-row {
+  background-color: #a5a5a5;
+  color: black;
+}
+
+.operator {
+  background-color: #ff9f0a;
+  color: white;
+}
+
+button:not(.top-row):not(.operator) {
+  background-color: #333333;
+  color: white;
+}
+
+.zero {
+  grid-column: span 2;
+  border-bottom-left-radius: 20px;
+}
+
+button:last-child {
+  border-bottom-right-radius: 20px;
+}
+
+/* 上段の左端のボタンに左上の角丸を適用 */
+.buttons button:first-child {
+  border-top-left-radius: 20px;
+}
+
+/* 上段の右から2番目のボタンに右上の角丸を適用 */
+.buttons button:nth-child(4) {
+  border-top-right-radius: 20px;
+}
